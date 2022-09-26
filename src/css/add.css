@@ -1,0 +1,13 @@
+#container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#formCard {
+  width: 50%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
