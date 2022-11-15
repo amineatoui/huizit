@@ -17,6 +17,7 @@ import { CardMedia } from "@material-ui/core";
 import MoviesOfActor from "./moviesOfActor";
 import UpdateActor from "./updateActor";
 import { Link } from "react-router-dom";
+import { serverIp } from "../firebase";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -78,7 +79,7 @@ export default function MovieCard(props) {
         style={{ marginRight: 5, marginLeft: 5, width: "95%" }}
         component="img"
         height="160"
-        image={`http://192.168.1.9:9000/getCover/${props.movie.id}`}
+        image={`http://localhost:9000/getCover/${props.movie.id}`}
         alt="green iguana"
       />
       <CardContent>

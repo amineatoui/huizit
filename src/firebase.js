@@ -20,4 +20,5 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
-export { auth, db, storage };
+const serverIp = "192.168.1.33";
+export { auth, db, storage, serverIp };

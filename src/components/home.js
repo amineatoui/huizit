@@ -99,6 +99,25 @@ const Home = () => {
     fetchProposals(propasalPageNum);
   }, [propasalPageNum]);
 
+  const fetchD = () => {
+    fetch("http://localhost:8080/greetings", {
+      method: "get",
+
+      headers: {
+        "Access-Control-Allow-Origin": "http://localhost:8080/greetings",
+
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    }).then((data) => {
+      console.log(data);
+    });
+  };
+
+  useEffect(() => {
+    fetchD();
+    return () => {};
+  }, []);
+
   return (
     <div>
       <Grid
